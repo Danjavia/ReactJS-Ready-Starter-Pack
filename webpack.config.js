@@ -87,7 +87,7 @@ module.exports = {
 		}),
 
 		new HtmlWebpackPlugin({
-	      	title: 'ComparaMejor.com',
+	      	title: 'yourSite.com',
 	      	filename: 'index.html',
 	      	template: 'src/index.html',
 	      	bundle: 'bundle-[hash].js'
