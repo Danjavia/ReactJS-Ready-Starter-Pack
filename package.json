@@ -42,10 +42,10 @@
   "dependencies": {
     "history": "^1.17.0",
     "jquery": "^1.12.1",
-    "react": "^0.15.3",
+    "react": "^15.3.0",
     "react-bootstrap": "^0.28.3",
     "react-bootstrap-select": "^0.14.0",
-    "react-dom": "^0.15.3",
+    "react-dom": "^15.3.0",
     "react-filter": "0.0.7",
     "react-google-analytics": "^0.2.0",
     "react-inlinesvg": "^0.4.2",
