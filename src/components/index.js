@@ -11,6 +11,7 @@ import $ from 'jquery'
 // Include Components
 import App from './app'
 import HelloWorld from './hello_world'
+import Crm from './crm'
 import NotFound from './not_found'
 
 // Root component
@@ -19,8 +20,6 @@ export default class Root extends Component {
 	constructor ( props, context ) {
 
 		super( props )
-
-		this.state = {}
 	}
 
 	render() {
@@ -28,6 +27,7 @@ export default class Root extends Component {
 			<Router history={appHistory}>
 				<Route path='/' component={ App }>
 					<IndexRoute component={ HelloWorld } />
+					<Route path='crm' component={ Crm } />
 					<Route path='*' component={ NotFound } />
 				</Route>
 			</Router>

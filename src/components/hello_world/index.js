@@ -15,7 +15,7 @@ export default class HelloWorld extends Component {
 	render() {
 		return (
 			<div>
-				<h1>Hello World with ReactJS</h1>
+				<h1>Hello World with LuisP</h1>
 			</div>
 		);
 	}
