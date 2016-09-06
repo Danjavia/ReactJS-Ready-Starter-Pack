@@ -8,15 +8,16 @@ export default class Crm extends Component {
     constructor(props) {
         super(props);
 
-		this.state = {}
+		this.state = {
+            users: []
+        }
     }
 
     componentWillMount() {
 
         Service.getUsers().then((data) => {
 
-            this.setState(data);
-            console.log(data);
+            this.setState({ users: data });
 
         }).catch((e) => {
             console.log(e);
@@ -30,7 +31,7 @@ export default class Crm extends Component {
     render() {
         return (
           <div className="crm">
-              <UserList {...this.state}/>
+              <UserList users={this.state.users}/>
           </div>
         );
     }
