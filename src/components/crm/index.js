@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import request from 'superagent';
+import Service from '../../services/Service';
 
 import H1 from '../h1';
 
@@ -12,12 +12,12 @@ export default class Crm extends Component {
     }
 
     componentWillMount() {
-        request.get('https://sheetsu.com/apis/v1.0/33dcdcd9')
-            .end(function(err, res) {
-                if (!err) {
-                    this.setState(res.body);
-                }
-            }.bind(this));
+
+        Service.getUsers().then((data) => {
+            this.setState(data);
+        }).catch((e) => {
+            console.log(e);
+        })
     }
 
     componentDidMount() {
