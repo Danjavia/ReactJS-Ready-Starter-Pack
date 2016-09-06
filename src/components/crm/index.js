@@ -17,8 +17,9 @@ export default class Crm extends Component {
 
         Service.getUsers().then((data) => {
 
-            this.setState({ users: data });
-
+            this.setState({
+                users: data,
+            });
         }).catch((e) => {
             console.log(e);
         })

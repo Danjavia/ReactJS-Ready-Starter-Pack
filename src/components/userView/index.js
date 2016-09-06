@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Service from '../../services/Service';
 
+import UserItem from '../userItem';
+
 
 export default class UserView extends Component {
 
     constructor(props) {
         super(props);
 
-		this.state = {
-            user: null
-        }
+		this.state = {}
     }
 
     componentWillMount() {
@@ -24,15 +24,13 @@ export default class UserView extends Component {
     }
 
     componentDidMount() {
-        
+
     }
 
     render() {
         return (
           <div className="user">
-              <h1>{this.state.name}</h1>
-              <h3>{this.state.username}</h3>
-              <a href={`mailto:${this.state.email}`}><strong>{this.state.email}</strong></a>
+              <UserItem {...this.state}/>
           </div>
         );
     }

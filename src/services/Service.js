@@ -4,6 +4,7 @@ import { URL } from '../constants/AppConstants';
 const url = URL;
 
 class Service {
+    
     getUsers() {
         return request({
             url: `${url}users`,
