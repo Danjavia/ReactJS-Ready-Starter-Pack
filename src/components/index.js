@@ -12,6 +12,7 @@ import $ from 'jquery'
 import App from './app'
 import HelloWorld from './hello_world'
 import Crm from './crm'
+import UserView from './userView'
 import NotFound from './not_found'
 
 // Root component
@@ -27,7 +28,8 @@ export default class Root extends Component {
 			<Router history={appHistory}>
 				<Route path='/' component={ App }>
 					<IndexRoute component={ HelloWorld } />
-					<Route path='crm' component={ Crm } />
+					<Route path='crm' component={ Crm }/>
+					<Route path='crm/:userId' component={ UserView }/>
 					<Route path='*' component={ NotFound } />
 				</Route>
 			</Router>
