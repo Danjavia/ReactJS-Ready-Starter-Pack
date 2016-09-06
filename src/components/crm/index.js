@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Service from '../../services/Service';
 
-import H1 from '../h1';
+import UserList from '../userList';
 
 export default class Crm extends Component {
 
@@ -14,7 +14,10 @@ export default class Crm extends Component {
     componentWillMount() {
 
         Service.getUsers().then((data) => {
+
             this.setState(data);
+            console.log(data);
+
         }).catch((e) => {
             console.log(e);
         })
@@ -27,7 +30,7 @@ export default class Crm extends Component {
     render() {
         return (
           <div className="crm">
-              <H1 {...this.state}/>
+              <UserList {...this.state}/>
           </div>
         );
     }

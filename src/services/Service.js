@@ -6,21 +6,21 @@ const url = URL;
 class Service {
     getUsers() {
         return request({
-            url: `${url}wp-json/wp/v2/artists/?filter[posts_per_page]=-1`,
+            url: `${url}users`,
             type: 'json'
         })
     }
 
     getUser(uid) {
         return request({
-            url: `${url}wp-json/wp/v2/artists/${uid}`,
+            url: `${url}users/${uid}`,
             type: 'json'
         })
     }
     
     postUser(uid, data) {
         return request({
-            url: `${url}wp-json/wp/v2/artists/${uid}`,
+            url: `${url}users/${uid}`,
             method: 'post',
             type: 'json',
             headers: {

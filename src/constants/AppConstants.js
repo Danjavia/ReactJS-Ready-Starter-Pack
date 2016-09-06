@@ -1,6 +1,6 @@
 // Write custom Constants here
 
-const URL = 'http://hayfestival_test.redassist.com/';
+const URL = 'http://jsonplaceholder.typicode.com/';
 
 export {
     URL
