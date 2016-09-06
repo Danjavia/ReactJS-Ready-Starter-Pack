@@ -1,7 +1,35 @@
-import request from 'superagent';
+import request from 'reqwest';
+import { URL } from '../constants/AppConstants';
 
-export default class Request {
-    getTodos() {
-        
+const url = URL;
+
+class Service {
+    getUsers() {
+        return request({
+            url: `${url}`,
+            type: 'json'
+        })
+    }
+
+    getUser(uid) {
+        return request({
+            url: `${url}${uid}`,
+            type: 'json'
+        })
+    }
+    
+    postUser(uid, data) {
+        return request({
+            url: `${url}${uid}`,
+            method: 'post',
+            type: 'json',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            data: JSON.stringify(data)
+        })
     }
 }
+
+export default new Service();
