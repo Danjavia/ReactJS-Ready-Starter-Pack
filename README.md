@@ -4,6 +4,7 @@ This is another very simple ready to start ReactJs package for init projects. In
 
 - ReactJS 15.0.3
 - ES6 Sintax
+- Babel 6
 - Webpack
 - React Hot Reload (RHR)
 - React-router
