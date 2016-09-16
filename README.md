@@ -2,6 +2,7 @@
 
 This is another very simple ready to start ReactJs package for init projects. Include simple sintax and.
 
+- ReactJS 15.0.3
 - ES6 Sintax
 - Webpack
 - React Hot Reload (RHR)
